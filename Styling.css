@@ -1,43 +1,100 @@
 body{
-    background:#cfd4d8
+    margin:0;
+    background:#cfd4d8;
+    font-family:Helvetica, Arial, sans-serif;
 }
 
-header {
-    background-color: #008dc8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Header */
+
+header{
+    background-color:#082846;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+    position:sticky;
+    top:0;
+    width:100%;
+    z-index:1000;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justifiy-content: center;
-    padding: 10px 0;
-    margin: 0;
+header nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-between; /* fixed */
+    align-items:center;
+    margin:0;
+    padding:12px 25px;
 }
 
-nav li {
-    margin: 0 20px;
+header nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    front-weight: bold;
-    transition: colour 0.3s;
+header nav a:hover{
+    color:#cccccc; /* fixed */
 }
 
-nav a:hover {
-    colour: #cccccc /*slightly darker on hover*/
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    top:48px;
+    left:0;
+    width:90px;
+    height:calc(100vh - 48px);
+    background:#111;
+    padding:18px 8px;
 }
 
-.account-icon {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+.side-nav{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
 
-h1 {
-    front-family: Helvetica;
+.side-nav a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    color:#bdbdbd;
+    font-size:12px;
+    transition:.2s;
+}
+
+.side-nav a:hover{
+    background:#1c1c1c;
+    color:white;
+}
+
+.side-nav a.active{
+    background:#082846;
+    color:white;
+}
+
+/* Fixed selector - it needs the dot */
+.side-nav i{
+    width:14px;
+    text-align:center;
+}
+
+/* Main Content */
+
+.content{
+    margin-left:105px;
+    margin-top:70px; /* fixed */
+    padding:20px;
+}
+
+.account-icon{
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+}
+
+h1{
+    font-family:Helvetica, Arial, sans-serif; /* fixed */
+    color:#444;
+    font-size:22px;
 }
