@@ -1,23 +1,61 @@
 <html>
     <head>
 
+        <link rel="stylesheet" href="Styling.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
         <script>
             function credentials() {
-                usernameValue = document.getElementById("username")
-                passwordValue = document.getElementById("password")
+                usernameValue = document.getElementById("username").value;
+                passwordValue = document.getElementById("password").value;
 
                 if (usernameValue == "admin" && passwordValue == "password") {
-                    /* Call admin page */
+                    window.location.href = "admin.html"
                 }
+                else if (usernameValue == "byron" && passwordValue == "dapto") {
+                    window.location.href = "home.html"
+                }
+
             }
          </script>
 
-    </head>s
+    </head>
 
     <body>
 
-        <input id = "username" type = "textfeild" placeholder = "Enter your email">
-        <input id = "password" type = "textfield" placeholder = "Enter your password">
-        <button onClick = "credentials()">Sign in</button>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">🌊 Coastlink Counsil</a></li>
+                    <li><a href="account.html"><span class="account-icon">&#xf406;</span> Byron</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class = "login-container">
+            <div class = "login-card">
+
+                <i class = "account-icon">&#xf406;</i>
+
+                <h2>Sign In</h2>
+                <p>Sign in to access the CoastLink Council Facility Booking System</p>
+
+                <div class = "input-box">
+                    <i class = "fa-regular fa-envelope"></i>
+                    <input id = "username" type = "textfeild" placeholder = "Enter your email">
+                </div>
+
+                <div class = "input-box">
+                    <i class = "fa-solid fa-lock"></i>
+                    <input id = "password" type = "textfeild" placeholder = "Enter your email">
+                </div>
+
+                <button onClick = "credentials()">Sign in</button>
+
+            </div>
+
+        </div>
+
     </body>
 </html>
