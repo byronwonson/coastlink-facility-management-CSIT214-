@@ -99,6 +99,15 @@ h1{
     font-size:22px;
 }
 
+.login-card {
+    width:360px;
+    background:#ececec;
+    border:1px solid #c8c8c8c8;
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+}
+
 .login-container{
     display:flex;
     justify-content:center;
@@ -113,4 +122,59 @@ h1{
     background: #2b2b2b;
     border-radius:10px;
     
+}
+
+.login-card h2{
+    color:#1295cf;
+    margin: 0 0 8px;
+}
+
+.login-card p {
+    color:#666;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.input-box {
+    display:flex;
+    align-items:center;
+    background:#2b2b2b;
+    border-radius:8px;
+    padding:10px 12px;
+    margin-bottom:12px;
+}
+
+.input-box i {
+    color:white;
+    margin-right:10px
+}
+
+.input-box input::placeholder {
+    color:white;
+    background:#2b2b2b;
+}
+
+.input-box input {
+    border:none;
+    outline:none;
+    background:transparent;
+    color:white;
+    width:100%;
+    font-size:13px;
+}
+
+.login-card button {
+    width:100%;
+    margin-top:12px;
+    background:#082846;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-card button:hover {
+    background:#0c3b61;
 }
