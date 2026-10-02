@@ -6,6 +6,11 @@
         <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+        <script>
+            function searchFacilities() {
+                
+            }
+        </script>
     </head>
 
     <body>
@@ -30,4 +35,49 @@
         </aside>
 
         <main class = "content">
+
+            <h1>Facilities</h1>
+
+            <p class = "page-description">
+                Browse avaliable council faciloties and find the right space for your booking
+            </p>
+
+            <section class = "search-card">
+
+                <h3>Find a Facility</h3>
+
+                <div class = "search-row">
+
+                    <input type = "text" placeholder = "Search facilities">
+
+                    <input type = "date">
+
+                    <select>
+                        <option>Any Time</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+
+                    <button>Search</button>
+                </div>
+            </section>
+
+            <h2>Avaliable Facilities</h2>
+
+            <div id = "results">
+
+                <div class = "facility-results">
+
+                    <div>
+                        <h3>Community Hall</h3>
+                        <p>Capacity: 150 people</p>
+                        <p>Avaliable</p>
+                    </div>
+
+                    <button onclick="bookFacility('Community Hall')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
 </html>
