@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>CoastLink Counsil</title>
+
+        <link rel="stylesheet" href="Styling.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">🌊 Coastlink Counsil</a></li>
+                    <li><a href="account.html"><span class="account-icon">&#xf406;</span> Byron</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class = "sidebar">
+
+            <nav class = "side-nav">
+                <a href="home.html"><i class = "fa-solid fa-house"></i>Dashboard</a>
+                <a href="facilities.html"><i class = "fa-solid far fa-building"></i>Facilities</a>
+                <a href="bookings.html" class = "active"><i class = "fa-solid far fa-calendar"></i>Bookings</a>
+                <a href="account.html"><i class = "fa-solid fas fa-user-circle"></i>Account</a>
+            </nav>
+        </aside>
+
+        <main class = "content"></main>
+
+            <h1>My Bookings</h1>
+
+            <p class="page-description">
+                View and manage your upcoming and previous facility bookings.
+            </p>
+
+
+            <!-- Upcoming Bookings -->
+
+            <section class="booking-section">
+
+                <h2>Upcoming Bookings</h2>
+
+
+                <div class="booking-card">
+
+                    <div class="booking-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+
+                    <div class="booking-info">
+
+                        <h3>Community Hall</h3>
+
+                        <p>
+                            <i class="fa-solid fa-calendar"></i>
+                            15 October 2026
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-clock"></i>
+                            6:00 PM - 8:00 PM
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-users"></i>
+                            150 people
+                        </p>
+
+                    </div>
+
+
+                    <div class="booking-status">
+
+                        <span class="status-confirmed">
+                            Confirmed
+                        </span>
+
+                        <button class="cancel-button"
+                        onclick="cancelBooking(this)">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="booking-card">
+
+                    <div class="booking-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+
+                    <div class="booking-info">
+
+                        <h3>Meeting Room</h3>
+
+                        <p>
+                            <i class="fa-solid fa-calendar"></i>
+                            22 October 2026
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-clock"></i>
+                            10:00 AM - 12:00 PM
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-users"></i>
+                            30 people
+                        </p>
+
+                    </div>
+
+
+                    <div class="booking-status">
+
+                        <span class="status-confirmed">
+                            Confirmed
+                        </span>
+
+                        <button class="cancel-button"
+                        onclick="cancelBooking(this)">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Previous Bookings -->
+
+            <section class="booking-section">
+
+                <h2>Previous Bookings</h2>
+
+
+                <div class="booking-card previous">
+
+                    <div class="booking-icon">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+
+
+                    <div class="booking-info">
+
+                        <h3>Sports Oval</h3>
+
+                        <p>
+                            <i class="fa-solid fa-calendar"></i>
+                            5 September 2026
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-clock"></i>
+                            2:00 PM - 4:00 PM
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-users"></i>
+                            300 people
+                        </p>
+
+                    </div>
+
+
+                    <div class="booking-status">
+
+                        <span class="status-completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+
+</html>

@@ -276,3 +276,132 @@ h1{
 .facility-results button:hover{
     background:#0c3b61;
 }
+
+/* Booking Page */
+
+.booking-section{
+    margin-bottom:30px;
+}
+
+.booking-section h2{
+    color:#444;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+
+/* Booking Card */
+
+.booking-card{
+    display:flex;
+    align-items:center;
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:12px;
+}
+
+
+/* Booking Icon */
+
+.booking-icon{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#dce5eb;
+    border-radius:10px;
+
+    margin-right:18px;
+}
+
+.booking-icon i{
+    color:#082846;
+    font-size:22px;
+}
+
+
+/* Booking Information */
+
+.booking-info{
+    flex:1;
+}
+
+.booking-info h3{
+    margin:0 0 8px;
+    color:#333;
+    font-size:17px;
+}
+
+.booking-info p{
+    margin:4px 0;
+    color:#666;
+    font-size:13px;
+}
+
+.booking-info p i{
+    width:16px;
+    color:#082846;
+}
+
+
+/* Booking Status */
+
+.booking-status{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+}
+
+
+/* Confirmed */
+
+.status-confirmed{
+    background:#d9f0df;
+    color:#168a4b;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* Completed */
+
+.status-completed{
+    background:#e1e1e1;
+    color:#666;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* Cancel Button */
+
+.cancel-button{
+    background:#9b3030;
+    color:white;
+    border:none;
+    border-radius:7px;
+    padding:8px 14px;
+    font-size:11px;
+    cursor:pointer;
+}
+
+.cancel-button:hover{
+    background:#7d2525;
+}
+
+
+/* Previous Booking */
+
+.booking-card.previous{
+    opacity:0.75;
+}
