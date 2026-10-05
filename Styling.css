@@ -405,3 +405,85 @@ h1{
 .booking-card.previous{
     opacity:0.75;
 }
+
+/* Account page */
+
+.account-card {
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    max-width:700px;
+}
+
+.account-card h2{
+    margin:0 0 20px;
+    color:#444;
+    font: size 18px;
+}
+
+.account-row{
+    display:flex;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.account-row label{
+    width:120px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.account-row input {
+    flex:1;
+    border:1px solid #c5c5c5c5;
+    border-radius:7px;
+    padding:10px;
+    font-size:13px;
+}
+
+.account-description{
+    color:#666;
+    font-size:13px;
+    margin-top:-10px;
+    margin-bottom:18px
+}
+
+.accessibility-option {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #d5d5d5;
+    padding:15px 0;
+}
+
+.accessibility-option strong{
+    color:#444;
+    font-size:14px;
+}
+
+.accessibility-option p {
+    margin:5px 0 0;
+    color:#777;
+    font-size:12px;
+}
+
+.accibility-option input{
+    width:18px;
+    height:18px;
+}
+
+.save-button:hover{
+    background:#0c3b61
+}
+
+.save-button {
+    background:#082846;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:11px 22px;
+    font-weight:bold;
+    cursor:pointer;
+}
