@@ -5,6 +5,25 @@
         <link rel="stylesheet" href="Styling.css">
         <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+        <script>
+            function accessibility() {
+                if (document.getElementById("highContrast").checked) {
+                    document.body.classList.add("high-contrast");
+                }
+                else {
+                    document.body.classList.remove("high-contrast")
+                }
+
+                if (document.getElementById("largeText").checked) {
+                    document.body.classList.add("large-text");
+                }
+                else {
+                    document.body.classList.remove("large-text");
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -74,7 +93,7 @@
                         <p>Increase the contrast between text and backgrounds</p>
                     </div>
 
-                    <input type = "checkbox">
+                    <input type = "checkbox" id = "highContrast" onchange = "accessibility()">
                 </div>
 
                 <div class = "accessibility-option">
@@ -83,7 +102,7 @@
 
                         <p>Increase teh size of text througout the system.</p>
                     </div>
-                    <input type = "checkbox">
+                    <input type = "checkbox" id = "largeText" onchange = "accessibility()">
                 </div>
             </section>
 
