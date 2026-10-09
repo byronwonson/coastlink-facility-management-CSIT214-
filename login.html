@@ -13,8 +13,21 @@
                 if (usernameValue == "admin" && passwordValue == "password") {
                     window.location.href = "admin.html"
                 }
-                else if (usernameValue == "byron" && passwordValue == "dapto") {
+                else if (usernameValue == "byron@example.com" && passwordValue == "dapto") {
                     window.location.href = "home.html"
+                }
+                else {
+                    usernameBox = document.getElementById("username");
+                    passwordBox = document.getElementById("password");
+                    
+                    usernameBox.value = "";
+                    passwordBox.value = "";
+
+                    usernameBox.placeholder = "Invalid username or password";
+                    passwordBox.placeholder = "Please try again";
+
+                    usernameBox.classList.add("invalid");
+                    passwordBox.classList.add("invalid");
                 }
 
             }
@@ -28,7 +41,6 @@
             <nav>
                 <ul>
                     <li><a href="home.html">🌊 Coastlink Counsil</a></li>
-                    <li><a href="account.html"><span class="account-icon">&#xf406;</span> Byron</a></li>
                 </ul>
             </nav>
         </header>
@@ -51,7 +63,7 @@
                     <input id = "password" type = "textfeild" placeholder = "Enter your password">
                 </div>
 
-                <button onClick = "credentials()">Sign in</button>
+                <button type = "button" onClick = "credentials()">Sign in</button>
 
             </div>
 

@@ -276,3 +276,284 @@ h1{
 .facility-results button:hover{
     background:#0c3b61;
 }
+
+/* Booking Page */
+
+.booking-section{
+    margin-bottom:30px;
+}
+
+.booking-section h2{
+    color:#444;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+
+/* Booking Card */
+
+.booking-card{
+    display:flex;
+    align-items:center;
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:12px;
+}
+
+/* Booking Information */
+
+.booking-info{
+    flex:1;
+}
+
+.booking-info h3{
+    margin:0 0 8px;
+    color:#333;
+    font-size:17px;
+}
+
+.booking-info p{
+    margin:4px 0;
+    color:#666;
+    font-size:13px;
+}
+
+.booking-info p i{
+    width:16px;
+    color:#082846;
+}
+
+
+/* Booking Status */
+
+.booking-status{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+}
+
+
+/* Confirmed */
+
+.status-confirmed{
+    background:#d9f0df;
+    color:#168a4b;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* Completed */
+
+.status-completed{
+    background:#e1e1e1;
+    color:#666;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* Cancel Button */
+
+.cancel-button{
+    background:#9b3030;
+    color:white;
+    border:none;
+    border-radius:7px;
+    padding:8px 14px;
+    font-size:11px;
+    cursor:pointer;
+}
+
+.cancel-button:hover{
+    background:#7d2525;
+}
+
+
+/* Previous Booking */
+
+.booking-card.previous{
+    opacity:0.75;
+}
+
+/* Account page */
+
+.account-card {
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    max-width:700px;
+}
+
+.account-card h2{
+    margin:0 0 20px;
+    color:#444;
+    font: size 18px;
+}
+
+.account-row{
+    display:flex;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.account-row label{
+    width:120px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.account-row input {
+    flex:1;
+    border:1px solid #c5c5c5c5;
+    border-radius:7px;
+    padding:10px;
+    font-size:13px;
+}
+
+.account-description{
+    color:#666;
+    font-size:13px;
+    margin-top:-10px;
+    margin-bottom:18px
+}
+
+.accessibility-option {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #d5d5d5;
+    padding:15px 0;
+}
+
+.accessibility-option strong{
+    color:#444;
+    font-size:14px;
+}
+
+.accessibility-option p {
+    margin:5px 0 0;
+    color:#777;
+    font-size:12px;
+}
+
+.accibility-option input{
+    width:18px;
+    height:18px;
+}
+
+.save-button:hover{
+    background:#0c3b61
+}
+
+.save-button {
+    background:#082846;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:11px 22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* High Contrast */
+
+.high-contrast{
+    background:#000;
+    color:#fff;
+}
+
+.high-contrast .content h1 {color:#fff}
+.high-contrast .content h2 {color:#fff}
+.high-contrast .account-card h2 {color:#000}
+.high-contrast .content .accessibility-option strong {color:#000}
+.high-contrast .page-description {color:#fff}
+.high-contrast .account-description {color:#000}
+.high-contrast .accessibility-option p {color:#000}
+.high-contrast .account-card {color:#fff; border:1px solid #fff}
+.high-contrast .account-row label {color:#000}
+.high-contrast .account-row input{background:#000; color:#fff; border:1px solid #fff;}
+
+/* Larger Text */
+.large-text{
+    font-size:18px;
+}
+
+.large-text h1{font-size:28px}
+.large-text h2{font-size:22px}
+.large-text p{font-size:16px}
+.large-text input{font-size:16px};
+.large-text button{font-size:16px};
+
+/* Admin Dashboard */
+
+.admin-stats {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.admin-stat-card {
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:18px;
+}
+
+
+/* Logs */
+
+.logs-card {
+    background:#f5f7f8;
+    border:1px solid #c8cdd0;
+    border-radius:12px;
+    padding:20px;
+}
+
+.logs-row {
+    display:grid;
+    grid-template-columns:1fr 1.3fr 1.2fr 1.3fr 1.5fr;
+    gap:15px;
+    align-items:center;
+    border-top:1px solid #d5d5d5;
+    padding:13px 5px;
+    color:#555;
+    font-size:12px;
+}
+
+.action-booked {
+    color:#168a4b;
+    font-weight:bold;
+}
+
+.action-cancelled {
+    color:#9b3030;
+    font-weight:bold;
+}
+
+.action-approved {
+    color:#082846;
+    font-weight:bold;
+}
+
+.input-box input.invalid::placeholder {
+    color:red;
+    opacity: 1;
+}
+
+.input-box:has(input.invalid) {
+    border: 1px solid red;
+}

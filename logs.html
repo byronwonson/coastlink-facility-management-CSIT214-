@@ -1,0 +1,102 @@
+<head>
+        <title>CoastLink Counsil</title>
+
+        <link rel="stylesheet" href="Styling.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">🌊 Coastlink Counsil</a></li>
+                    <li><a href="account.html"><span class="account-icon">&#xf406;</span> ADMIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class = "sidebar">
+
+            <nav class = "side-nav">
+                <a href="admin.html"><i class = "fa-solid fa-house"></i>Dashboard</a>
+                <a href="logs.html" class = "active"><i class = "fas fa-folder"></i>Logs</a>
+                <a href="account.html"><i class = "fa-solid fas fa-user-circle"></i>Account</a>
+            </nav>
+        </aside>
+
+        <main class = "content">
+
+            <h1>Audit Logs</h1>
+
+            <p class = "page-description">
+                View a record of activity within the facility booking system.
+            </p>
+
+            <section class = "logs-card">
+
+                <div class = "logs-table">
+                    
+                    <div class = "audit-row audit-title">
+
+                        <span>User</span>
+                        <span>Action</span>
+                        <span>Facility</span>
+                        <span>Date / Time</span>
+                        <span>Reason</span>
+
+                    </div>
+
+                    <div class = "logs-row">
+                        <span>Byron</span>
+                        <span>
+                            <span class = "action-booked">
+                                Booking Created
+                            </span>
+                        </span>
+
+                        <span>Community Hall</span>
+
+                        <span>15 Oct 2026<br>10:32 AM</br></span>
+                        
+                        <span>Community Event</span>
+                    </div>
+
+                    <div class = "logs-row">
+                        <span>Tai</span>
+                        <span>
+                            <span class = "action-cancelled">
+                                Booking Cancelled
+                            </span>
+                        </span>
+
+                        <span>Sports Oval</span>
+
+                        <span>14 Oct 2026<br>7:22 AM</br></span>
+                        
+                        <span>Community Event</span>
+                    </div>
+
+                    <div class = "logs-row">
+                        <span>Admin</span>
+                        <span>
+                            <span class = "action-approved">
+                                Booking Approved
+                            </span>
+                        </span>
+
+                        <span>Community Hall</span>
+
+                        <span>14 Oct 2026<br>5:22 AM</br></span>
+                        
+                        <span>Request approvead</span>
+                    </div>
+
+
+                </div>
+            </section>
+        </main>
+        
+    </body>
+</html>

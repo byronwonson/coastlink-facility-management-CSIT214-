@@ -8,7 +8,28 @@
 
         <script>
             function searchFacilities() {
+
+                document.querySelectorAll(".facility-results").forEach(function(facility) {
+
+                    if (
+                        facility.querySelector("h3").textContent
+                        .toLowerCase()
+                        .includes(
+                            document.querySelector(".search-row input[type='text']").value.toLowerCase()
+                        )
+                    ) {
+                        facility.style.display = "flex";
+                    }
+                    else {
+                        facility.style.display = "none";
+                    }   
+
+                });
                 
+            }
+
+            function bookFacility(facilityName) {
+                window.location.href = "bookings.html?facility=" + encodeURIComponent(facilityName);
             }
         </script>
     </head>
@@ -59,7 +80,7 @@
                         <option>Evening</option>
                     </select>
 
-                    <button>Search</button>
+                    <button onclick="searchFacilities()">Search</button>
                 </div>
             </section>
 
@@ -72,12 +93,40 @@
                     <div>
                         <h3>Community Hall</h3>
                         <p>Capacity: 150 people</p>
-                        <p>Avaliable</p>
+                        <p>Avaliable: True</p>
                     </div>
 
                     <button onclick="bookFacility('Community Hall')">
                         Book Now
                     </button>
                 </div>
+
+                <div class = "facility-results">
+
+                    <div>
+                        <h3>Tenis Court</h3>
+                        <p>Capacity: 20 people</p>
+                        <p>Avaliable: True</p>
+                    </div>
+
+                    <button onclick="bookFacility('Tenis Court')">
+                        Book Now
+                    </button>
+                </div>
+
+                <div class = "facility-results">
+
+                    <div>
+                        <h3>Meeting Room</h3>
+                        <p>Capacity: 10 people</p>
+                        <p>Avaliable: True</p>
+                    </div>
+
+                    <button onclick="bookFacility('Meeting Room')">
+                        Book Now
+                    </button>
+                </div>
             </div>
+        </main>
+    </body>
 </html>
