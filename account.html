@@ -23,6 +23,10 @@
                     document.body.classList.remove("large-text");
                 }
             }
+
+            function saveChanges() {
+                window.location.href = "home.html";
+            }
         </script>
     </head>
 
@@ -106,7 +110,7 @@
                 </div>
             </section>
 
-            <button class = "save-button">
+            <button class = "save-button" onClick = "saveChanges()">
                 Save Changes
             </button>
         </main>

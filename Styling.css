@@ -548,3 +548,12 @@ h1{
     color:#082846;
     font-weight:bold;
 }
+
+.input-box input.invalid::placeholder {
+    color:red;
+    opacity: 1;
+}
+
+.input-box:has(input.invalid) {
+    border: 1px solid red;
+}
