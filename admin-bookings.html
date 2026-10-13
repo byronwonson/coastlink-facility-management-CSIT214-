@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>CoastLink Council</title>
+
+        <link rel="stylesheet" href="Styling.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script>
+
+            function showBookings() {
+
+                bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+                document.getElementById("allBookings").innerHTML = "";
+
+                bookings.forEach(function(booking) {
+
+                    document.getElementById("allBookings").innerHTML +=
+                        "<div class='booking-card'>" +
+                            "<div class='booking-info'>" +
+                                "<h3>" + booking.f + "</h3>" +
+                                "<p>Booked by: " + booking.user + "</p>" +
+                                "<p>Status: " + booking.status + "</p>" +
+                            "</div>" +
+                            (booking.status == "Confirmed"
+                                ? "<button class='cancel-button' onclick='cancelAdminBooking(" + booking.id + ")'>Cancel Booking</button>"
+                                : "") +
+                        "</div>";
+
+                });
+
+                if (document.getElementById("allBookings").innerHTML == "") {
+                    document.getElementById("allBookings").innerHTML =
+                        "<p class='page-description'>There are currently no bookings.</p>";
+                }
+            }
+
+            function cancelAdminBooking(id) {
+
+                if (confirm("Are you sure you want to cancel this booking?")) {
+
+                    bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+                    bookings.forEach(function(booking) {
+
+                        if (booking.id == id && booking.status == "Confirmed") {
+                            booking.status = "Cancelled by Admin";
+                        }
+
+                    });
+
+                    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+                    showBookings();
+
+                    alert("Booking cancelled successfully.");
+                }
+            }
+
+            window.onload = showBookings;
+        </script>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">🌊 Coastlink Council</a></li>
+                    <li><a href="account.html"><span class="account-icon">&#xf406;</span> ADMIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class = "sidebar">
+
+            <nav class = "side-nav">
+                <a href="admin.html"><i class = "fa-solid fa-house"></i>Dashboard</a>
+                <a href="logs.html"><i class = "fas fa-folder"></i>Logs</a>
+                <a href="admin-bookings.html" class = "active"><i class = "fa-solid far fa-calendar"></i>All Bookings</a>
+                <a href="account_admin.html"><i class = "fa-solid fas fa-user-circle"></i>Account</a>
+            </nav>
+        </aside>
+
+        <main class = "content">
+
+            <h1>All Bookings</h1>
+
+            <p class="page-description">
+                View and manage all facility bookings made by residents.
+            </p>
+
+            <section class="booking-section">
+
+                <h2>Facility Bookings</h2>
+
+                <div id="allBookings"></div>
+
+            </section>
+
+        </main>
+</html>

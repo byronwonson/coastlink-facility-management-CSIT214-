@@ -29,8 +29,44 @@
             }
 
             function bookFacility(facilityName) {
-                window.location.href = "bookings.html?facility=" + encodeURIComponent(facilityName);
+
+                bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+                alreadyBooked = bookings.some(function(booking) {
+                    return booking.f == facilityName &&
+                        booking.status == "Confirmed";
+                });
+
+                if (alreadyBooked) {
+                    alert("This facility is already booked!");
+                    return;
+                }
+
+                bookings.push({
+                    id: Date.now(),
+                    user: "Byron",
+                    f: facilityName,
+                    status: "Confirmed"
+                });
+
+                localStorage.setItem("bookings", JSON.stringify(bookings));
+
+                alert("Booking confirmed!");
+
+                window.location.href = "bookings.html";
+
             }
+
+            window.onload = function() {
+
+                search = new URLSearchParams(window.location.search).get("search");
+
+                if (search != null) {
+                    document.getElementById("search").value = search;
+                    searchFacilities();
+                }
+
+            };
         </script>
     </head>
 
@@ -69,7 +105,7 @@
 
                 <div class = "search-row">
 
-                    <input type = "text" placeholder = "Search facilities">
+                    <input type = "text" placeholder = "Search facilities" id = "search">
 
                     <input type = "date">
 

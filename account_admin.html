@@ -27,6 +27,10 @@
             function saveChanges() {
                 window.location.href = "admin.html";
             }
+
+            function logout() {
+                window.location.href = "login.html";
+            }
         </script>
     </head>
 
@@ -46,6 +50,7 @@
             <nav class = "side-nav">
                 <a href="admin.html"><i class = "fa-solid fa-house"></i>Dashboard</a>
                 <a href="logs.html"><i class = "fas fa-folder"></i>Logs</a>
+                <a href="admin-bookings.html"><i class = "fa-solid far fa-calendar"></i>All Bookings</a>
                 <a href="account_admin.html" class = "active"><i class = "fa-solid fas fa-user-circle"></i>Account</a>
             </nav>
         </aside>
@@ -111,6 +116,10 @@
 
             <button class = "save-button" onClick = "saveChanges()">
                 Save Changes
+            </button>
+
+            <button class = "logout-button" onClick = "logout()">
+                Logout
             </button>
         </main>
 

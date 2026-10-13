@@ -557,3 +557,26 @@ h1{
 .input-box:has(input.invalid) {
     border: 1px solid red;
 }
+
+.logout-button {
+    background: #9b3030;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding: 11px 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #7d2525;
+}
+
+.booking-card:has(.cancelled) {
+    opacity: 0.65;
+}
+
+.cancelled {
+    color: #9b3030;
+    font-weight: bold;
+}
