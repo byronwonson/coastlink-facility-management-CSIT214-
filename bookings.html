@@ -7,13 +7,63 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
         <script>
-            function cancelBooking(button) {
-                if (confirm("Are you sure you want to cencel this booking?")) {
-                    button.closest(".booking-card").remove();
+
+            function cancelBooking(id) {
+                if (confirm("Are you sure you want to cancel this booking?")) {
+
+                    bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+                    bookings.forEach(function(booking) {
+
+                        if (booking.id == id && booking.user == "Byron") {
+                            booking.status = "Cancelled by Byron";
+                        }
+
+                    });
+
+                    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+                    if (bookings.length > 0 && bookings.every(function(booking) {
+                            return booking.status == "Cancelled by Byron" ||
+                                booking.status == "Cancelled by Admin";
+                        })) {
+                            localStorage.removeItem("bookings");
+                        }
+
+                    showMyBookings();
 
                     alert("Booking cancelled successfully.")
                 }
             }
+
+            function showMyBookings() {
+                bookings = JSON.parse(localStorage.getItem("bookings")) || []
+
+                document.getElementById("myBookings").innerHTML = "";
+
+                bookings.forEach(function(booking) {
+                    if (booking.user == "Byron") {
+
+                        document.getElementById("myBookings").innerHTML += 
+                            "<div class = 'booking-card'>" + 
+                                "<div class = 'booking-info'>" +
+                                    "<h3>" + booking.f + "</h3>" +
+                                    "<p>Status: " + booking.status + "</p>" +
+                                "</div>" +
+                                (booking.status == "Confirmed"
+                                    ? "<button class = 'cancel-button' onClick='cancelBooking(" + booking.id + ")'>Cancel</button>"
+                                    : "") + 
+                            "</div>";
+                    }
+                });
+
+                if (document.getElementById("myBookings").innerHTML == "") {
+                    document.getElementById("myBookings").innerHTML =
+                    "<p class='page-description'>You have no bookings yet.</p>";
+                }
+            }
+
+            window.onload = showMyBookings;
         </script>
     </head>
 
@@ -46,9 +96,15 @@
                 View and manage your upcoming and previous facility bookings.
             </p>
 
+            <section class = "booking-section">
+
+                <h2>All My Bookings</h2>
+                <div id = "myBookings"></div>
+            </section>
+
 
             <!-- Upcoming Bookings -->
-
+<!--
             <section class="booking-section">
 
                 <h2>Upcoming Bookings</h2>
@@ -137,9 +193,9 @@
 
             </section>
 
-
+-->
             <!-- Previous Bookings -->
-
+<!--
             <section class="booking-section">
 
                 <h2>Previous Bookings</h2>
@@ -180,7 +236,7 @@
 
                 </div>
 
-            </section>
+            </section>-->
 
         </main>
     </body>

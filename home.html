@@ -9,7 +9,9 @@
 
         <script>
             function searchFacilities() { 
-                window.location.href = "facilities.html"
+                search = document.getElementById("search").value;
+
+                window.location.href = "facilities.html?search=" + encodeURIComponent(search);
             }
         </script>
     </head>
@@ -45,7 +47,7 @@
 
                 <div class = "search-row">
 
-                    <input type = "text" placeholder = "Search facilities">
+                    <input type = "text" placeholder = "Search facilities" id = "search">
 
                     <input type = "date">
 
